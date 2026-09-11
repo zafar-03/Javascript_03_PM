@@ -1,0 +1,107 @@
+Day : 1
+==========================================
+JavaScript :
+
+Web Development :
+	- Full-stack  Development 
+
+	- Generally : 
+		HTML(done),CSS(done),JS
+
+Bootstrap : Framework (HTML/CSS/JS)
+
+- React JS
+- Next JS 
+- Express JS
+- Node JS
+====================================
+=> What is a JavaScript ?
+-> It's a open-source, scripting Programming Language.
+-> File extension :  ".JS".
+	console.log("Hello")
+
+What is a TypeScript?
+-> It's a Additional Version of JavaScript with some of special Syntax.
+-> File extension :  ".TS".
+	console.log("Hello")
+==================================
+MO -> LS -> JS(Microsoft) -> ES
+
+ES : ECMAScript (original name of JavaScript)
+==================================
+Netscape Browser 
+e
+
+==================================
+ES1 -> ECMAScript 1
+
+
+
+ES5 -> ECMAScript 5 (2009)
+	React JS (Meta)
+	
+ES6 -> ECMAScript 6 (2015)
+...........
+
+Framework 40+
+
+
+
+================================
+1. What is a JS?
+2. History of JS.
+3. Extension.
+4. some example of Framework with their uses.
+	React : to create a single page applications.
+	Next  : to create a complex website.
+5. Webpage and website.
+6. Website and Webapp.
+7. static and Dynamic. 
+======================================================
+Day : 2
+
+- History of TypeScript & Importance  
+- Basic Data types of TypeScript
+- Output show Method console.log Document write Alert Inner HTML
+
+==============================================
+We need HTML File to run JS(not compulsory).
+
+for output :
+screen 1 : main screen    (output)
+	browser tab
+
+	document.write("Hello");
+
+screen 2 : console screen (testing/debugging)
+	1. right click -> inspect ->console
+	2. click on 3 dot -> more tools -> Developer tools 
+		ctrl + shift + i 
+		console.log("hello");
+==================================================
+=> How to Implement JS with HTML File : 
+1. External JS : 
+	- create a new file with '.js' extension.
+	in HTML : (can write before end of body tag)
+		write script tag with src attribute.
+			src(path)
+
+2. Internal JS : 
+	in HTML :
+		write script tag then write js code in a script tag
+
+3. Inline JS :
+	in HTML :
+		use event.
+
+======================================
+Day : 3 
+Variable Declaration & Rules 
+
+=====================================
+Day : 4 
+Types Of Operator
+- Arithmetic operators
+- Assignment operators
+- Comparison operators
+- Logical operators
