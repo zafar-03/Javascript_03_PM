@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hello</h1>
+
+    <script>
+        
+        var n1 = Number(prompt("Enter the Value of n1 :"));
+        var n2 = Number(prompt("Enter the Value of n2 :"));
+        var n3 = Number(prompt("Enter the Value of n3 :"));
+
+        if(n1>n2){
+            if(n1>n3){
+                document.getElementById('h1').innerHTML ="N1 is Greater";
+                
+            }else if(n1==n3){
+                document.getElementById('h1').innerHTML ="N1 and N3 are Equal and Greater";
+            }else{
+                document.getElementById('h1').innerHTML ="N3 is Greater";
+            }
+        }else if(n1<n2){
+            if(n2>n3){
+                document.getElementById('h1').innerHTML ="N2 is Greater";
+            }else if(n2==n3){
+                document.getElementById('h1').innerHTML ="N2 and N3 are Equal and Greater";
+            }else{
+                document.getElementById('h1').innerHTML ="N3 is Greater";
+            }
+        }else{
+            if(n1>n3){
+                document.getElementById('h1').innerHTML ="N1 and N2 are Equal and Greater";
+            }else if(n1==n3){
+                document.getElementById('h1').innerHTML ="N1,n2 and N3 are Equal and Greater";
+            }else{
+                document.getElementById('h1').innerHTML ="N3 is Greater";
+            }
+        }
+    </script>
+</body>
+</html>
