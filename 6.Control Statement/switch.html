@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let pwd;
+        var count = 3;
+        while (true) {
+            if (!pwd) {
+                pwd = Number(prompt("Create Password :"));
+                alert("Password Created Successfully");
+
+            } else {
+                var cmpwd = Number(prompt("Enter your password :"));
+                if (cmpwd == pwd) {
+                    var choice = Number(prompt("1. for Update Password.\n2. check Password.\n\nEnter Your Choice:"))
+
+                    switch (choice) {
+                        case 1: pwd = Number(prompt("New Password Password :"));
+                            alert("Password Updated Successfully");
+                            break;
+                        case 2: alert(`Your password : ${pwd}`);
+                            break;
+                        default:
+                            break;
+                    }
+                }else{
+                    count--;
+                    if(count==0){
+                        alert("You've reached the Limit!!");
+                        break;
+                    }
+                    alert(`Wrong password !!. you've more ${count} trail.`);
+
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // console.log(Math.floor(Math.random()*100));
+        var istrue = true;
+        while (istrue) {
+            var num = parseInt(Math.random() * 100);
+            var count = 10;
+            while (true) {
+                if (count == 0) {
+                    alert("Game Over !!");
+                    break;
+                }
+                var n = Number(prompt("Enter the Value of N :"));
+                count--;
+                if (n < num) {
+                    alert(`Guess the Higher Number (limit remaining ${count})`);
+                } else if (num == n) {
+                    alert(`Correct`);
+                    break;
+                } else {
+                    alert(`Guess the Lower Number (limit remaining ${count})`);
+                }
+            }
+            istrue = confirm("Do you want to play Again ?");
+        }
+
+    </script>
+</body>
+
+</html>
