@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // Nested Function :
+        // function main() {
+        //     console.log("Main Content")
+        //     function greeting() {
+        //         console.log("Hello");
+        //     }
+        //     greeting();
+        // }
+
+        // main();
+
+        // Arrow Function :
+        // 1. without arg and without rtn 
+         var greeting = ()=>{
+            console.log("Hello Everyone!!");
+        }
+        // greeting();
+
+        // 2. with arg and without rtn 
+        let add = (n1,n2)=>{  //n1,n2  paremeter
+            console.log("Addition : ",n1+n2);
+        }
+        // add(11,12); //11,12 arg
+
+        // 3. without arg and with return type
+        const pi = ()=>{
+            return 3.14;  // rtn 
+        }
+        // console.log(2*2*pi());
+
+        // 4. with arg and with return type
+        var result = (marks)=>{
+            if(marks>=35)
+                return "Pass"
+            else 
+                return "Fail"
+        }
+
+        // console.log(result(23));
+
+
+        // var arrayfu = () => console.log("Hello");
+        // arrayfu();
+
+        // var arrayfu = n1 => console.log(n1);
+        // arrayfu(11);
+
+         var arrayfu = () =>  "Hello";
+
+        // console.log(arrayfu());
+
+
+        // IIFE : 
+        // (function (){
+        //     console.log("Hello")
+        // })();
+
+
+
+        // (function (){
+        //     console.log("Everyone")
+        // })();
+
+
+
+        function main(callback){
+            var a = callback("Enter YOur Name");
+            console.log(a);
+        }
+        // main(prompt);
+
+        var fact = 1;
+        function Factorial(n){
+            if(n==1){
+                console.log("Factorial :",fact);
+                return;
+            }
+            fact*=n;
+            Factorial(n-1);
+        }
+        Factorial(5);
+    </script>
+</body>
+
+</html>
