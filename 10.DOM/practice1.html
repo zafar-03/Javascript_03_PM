@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        div{
+            height: 100vh;
+            background-color: rgb(18, 17, 17);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        img{
+            flex-grow: 1;
+        }
+        button{
+            background-color: gainsboro;
+            padding: 5px 20px;
+            width: 150px;
+            font-size: 24px;
+            border: none;
+            border-radius: 8px;
+            color: black;
+        }
+        section{
+            width: 250px;
+            height: 400px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section>
+            <img src="off.png" alt="">
+        </section>
+        <button>ON</button>
+    </div>
+
+
+    <script>
+        document.querySelector("button").onclick = function (){
+            if(document.querySelector("button").innerText == "ON"){
+                document.querySelector("img").attributes.src.value = "on.png";
+                document.querySelector("button").innerText = "OFF";
+            }else{
+                document.querySelector("img").attributes.src.value = "off.png";
+                document.querySelector("button").innerText = "ON";
+            }
+
+        }
+
+    </script>
+</body>
+</html>
