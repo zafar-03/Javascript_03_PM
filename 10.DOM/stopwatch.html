@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Stop watch</h1>
+    <div>
+        <span class="minute"></span> : <span class="second">00</span>
+    </div>
+
+    <button>Stop</button>
+    <script>
+        let min = 5;
+        let second = 60;
+        document.querySelector(".minute").innerHTML = min;
+        min--;
+        setTimeout(() => {
+            document.querySelector(".minute").innerHTML = min;
+        }, 1000);
+        let id =  setInterval(() => {
+            second--;
+            document.querySelector(".second").innerHTML = second;
+        }, 1000);
+
+        document.querySelector("button").onclick = function(){
+            clearInterval(id);
+        }
+
+    </script>
+</body>
+</html>
