@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        section{
+            background-color: rgb(22, 21, 21);
+            color: white;
+            font-family: calibri;
+            padding: 50px;
+            display: grid;
+            gap: 30px;
+        }
+        h1{
+            font-size: 48px;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+        main{
+            background-color: rgb(28, 27, 27);
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.4s;
+        }
+        main:hover{
+            transform: scale(1.1);
+            box-shadow: 1px 1px 10px rgb(48, 48, 48);
+        }
+        img{
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <h1>Movies</h1>
+        <div>
+
+        </div>
+    </section>
+
+    <script>
+        const API = "https://ghibliapi.vercel.app/films";
+
+        fetch(API).then((response)=>{
+            response.json().then((data)=>{
+                for (const element of data) {
+                    const main = document.createElement("main");
+                    const h3 = document.createElement("h3");
+                    const h4 = document.createElement("h4");
+                    const img = document.createElement("img");
+                    // const p = document.createElement("p");
+                    const span = document.createElement("span");
+
+                    h3.append(element.title);
+                    h4.append(element.director);
+                    img.src = element.image;
+                    // p.append(element.description);
+                    span.append(`Release Year : ${element.release_date}`);
+
+                    main.appendChild(img);
+                    main.appendChild(h3);
+                    main.appendChild(h4);
+                    // main.appendChild(p);
+                    main.appendChild(span);
+                    
+                    document.querySelector("div").appendChild(main);
+                }
+            })
+        });
+
+
+    </script>
+</body>
+</html>
