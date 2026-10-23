@@ -32,3 +32,33 @@ img{
     border-radius: 8px;
     height: 250px;
 }
+
+.search{
+    padding: 50px;
+    text-align: center;
+}
+.search input{
+    padding: 10px 20px;
+    font-size: 24px;
+    font-family: calibri;
+    width: 50%;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 2px solid gainsboro;
+}
+main button{
+    background-color: rgb(255, 204, 0);
+    border: none;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+#data.mydata{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#data.mydata main button{
+    background-color: red;
+}

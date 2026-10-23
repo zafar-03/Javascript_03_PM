@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cart</h1>
+    <div id="data" class="mydata">
+
+    </div>
+    <script>
+        var addcart = JSON.parse(localStorage.getItem("addCart"));
+        var products = JSON.parse(localStorage.getItem("products"));
+        for (const element of addcart) {
+            // console.log(element);
+
+            for (const key in products) {
+                const temp = products[key].filter((ele) => {
+                    return (ele.model == element);
+                });
+                if (temp.length != 0) {
+                    for (const element of temp) {
+                        let main = document.createElement("main");
+                        let h3 = document.createElement("h3");
+                        let h4 = document.createElement("h4");
+                        let p = document.createElement("p");
+                        let span = document.createElement("span");
+                        let img = document.createElement("img");
+                        let btn = document.createElement('button');
+
+                        img.src = element.imageurl;
+
+
+                        h3.append(element.model);
+                        h4.append(element.brand);
+                        p.append(element.desc);
+                        span.append(element.price);
+                        btn.append("Remove Cart");
+
+                        main.appendChild(img);
+                        main.appendChild(h3);
+                        main.appendChild(h4);
+                        main.appendChild(span);
+                        main.appendChild(p);
+                        main.appendChild(btn);
+
+                        document.querySelector("#data").appendChild(main);
+                    }
+                }
+
+
+
+            }
+
+        }
+        document.body.onclick = function (e) {
+            const addCart = JSON.parse(localStorage.getItem("addCart"));;
+            if (e.target.tagName == "BUTTON") {
+                const temp =  addCart.filter((element)=>{
+                    return element != e.target.parentElement.children[1].innerText;
+                })
+                localStorage.setItem("addCart", JSON.stringify(temp));
+                location.href = "cart.html";
+            }
+        }
+    </script>
+</body>
+
+</html>
