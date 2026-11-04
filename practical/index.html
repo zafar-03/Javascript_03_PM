@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article>
+        <h1>Task Manager</h1>
+        <form>
+            <input type="text" id="title" name="title" placeholder="Enter Task Title">
+            <textarea name="descreption" id="descreption" placeholder="Enter Description"></textarea>
+            <input type="date" name="due-date" id="due-date">
+            <select name="priority" id="priority">
+                <option>low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+            <input type="submit" id="btn" value="Add">
+        </form>
+    </article> 
+
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Due-Date</th>
+            <th>Priority</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
